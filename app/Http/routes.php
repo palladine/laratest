@@ -11,10 +11,32 @@
 |
 */
 
-Route::get('/', function () {
-    return view('main');
-});
 
-Route::get('/welcome', function () {
-    return view('welcome');
-});
+Route::get('/', function () {
+	return view('main');
+})->name('main');
+
+Route::get('welcome', [
+	'uses' => 'UsersController@welcome',
+	'as' => 'welcome',
+	'middleware' => 'auth'
+]);
+
+Route::get('registration', function() {
+	return view('register');
+})->name('get_register');
+
+Route::post('registration', [
+	'uses' => 'UsersController@post_registration',
+	'as' => 'post_register'
+]);
+
+Route::post('login', [
+	'uses' => 'UsersController@login',
+	'as' => 'login'
+]);
+
+Route::get('logout', [
+	'uses' => 'UsersController@logout',
+	'as' => 'logout'
+]);

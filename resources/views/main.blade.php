@@ -1,9 +1,9 @@
 @extends('layouts.master')
 
 @section('title')
-	main page
-@endsection
+    Главная
+@stop
 
 @section('content')
-	<h1>The Content</h1>
-@endsection
+    main
+@stop

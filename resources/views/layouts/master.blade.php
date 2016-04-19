@@ -2,15 +2,14 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Lara-Test | @yield('title')</title>
+	<title>Lara | @yield('title')</title>
+	<link href="css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-	
-	@include('head')
+	@include('header')
+	@include('messages')
 
 	@yield('content')
-
-	@yield('footer')
-
+	<script src="js/bootstrap.min.js"></script>
 </body>
 </html>

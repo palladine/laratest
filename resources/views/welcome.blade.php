@@ -1,9 +1,9 @@
 @extends('layouts.master')
 
 @section('title')
-    welcome page
-@endsection
+    Вход
+@stop
 
 @section('content')
-    <h1>The Welcome</h1>
-@endsection
+    welcome
+@stop
